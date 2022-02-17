@@ -1,0 +1,376 @@
+$size : 10px;
+$input-shadow :0px 2px 5px rgba(0, 0, 0, 0.1);
+$product-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);;
+$centered:0 auto;
+$n:none;
+$radius:4px;
+$p:pointer;
+$backcolor:#FFFEFB;
+$textcolor:#3F3F3F;
+$rel:relative;
+$weight:600;
+.description{
+  font-size:$size;
+  color:#49485E;
+}
+.input_container{
+  box-shadow:$input-shadow;
+  width:100%;
+  background-color: $backcolor;
+  border-radius:$radius;
+  input{
+    width:80%;
+    height:92%;
+    border:$n;
+    border-radius:$radius;
+    position: $rel;
+    left:7%;
+    background-color:$backcolor;
+  }
+  input:focus{
+    border:$n;
+    outline: $n;
+  }
+  textarea{
+    width:80%;
+    height:92%;
+    border:$n;
+    border-radius:$radius;
+    position: $rel;
+    left:7%;
+    background-color:$backcolor;
+    resize: none;
+  }
+  textarea:focus{
+    border:$n;
+    outline: $n;
+  }
+}
+
+.addproduct_wrapper{
+
+  width:19.8%;
+  box-shadow: $product-shadow;
+  border-radius:$radius;
+  background-color:$backcolor;
+  max-height:440px;
+}
+.categories_wrapper{
+  width:80%;
+  margin:$centered;
+  position: $rel;
+ 
+}
+.text_container{
+  position: $rel;
+  margin-top:5%;
+}
+.dot{
+  position:$rel;
+  bottom:6px;
+  left:2px; 
+}
+.btn_container{
+  margin:10% auto 0 auto;
+  padding-bottom:10%;
+  width:80%;
+}
+.btn_add_disable{
+  height:36px;
+  border-radius:10px;
+  border:$n;
+  width:100%;
+  cursor:$p;
+ background-color:#EEEEEE;
+}
+.btn_add_active{
+  height:36px;
+  border-radius:10px;
+  border:$n;
+  width:100%;
+  cursor:$p;
+ background-color:#7BAE73;
+}
+.main_container{
+  margin:$centered;
+  width:90%;
+}
+.main_up_wrapper{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_wrapper{
+  display:flex;
+  flex-direction:row;
+ 
+}
+.deleteAnimation{
+  animation-name: deleteAnimation;
+  animation-duration:1s;
+  position:$rel;
+  display:flex;
+  flex-direction:column;
+  width:25.2%;
+  background-color:$backcolor;
+  margin-left:1.2%;
+  margin-bottom: 1.2%;
+  border-radius:$radius;
+  height:100%;
+  max-height:423px;
+}
+.product_wrapper{
+  position:$rel;
+  display:flex;
+  flex-direction:column;
+  width:25.2%;
+  background-color:$backcolor;
+  margin-left:1.2%;
+  margin-bottom: 1.2%;
+  border-radius:$radius;
+  height:100%;
+  max-height:423px;
+  animation-duration: 2s;
+  animation-name: product_animation;
+  transition: 0.8s all;
+  &:hover {
+    background-color:#dba1a1;
+    transition: 0.8s all;
+  }
+  &:hover .delete_product{
+  display:flex;
+  animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+  }
+}
+.product_container{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+ width:78%;
+}
+.information_container{
+  width:90%;
+  margin:$centered;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.image_product{
+
+  img{
+    width:100%;
+    height:200px;
+  }
+}
+.name_product{
+color:$textcolor;
+font-size:20px;
+font-weight:$weight;
+padding:5.3% 0;
+}
+
+.description_product{
+font-size:16px;
+}
+.price_product{
+  color:$textcolor;
+font-size:24px;
+font-weight:$weight;
+position: absolute;
+bottom:15px;
+}
+.delete_product{
+  position:absolute;
+  background-color:#FF8484;
+box-shadow: $input-shadow;
+border-radius: 10px;
+width:32px;
+height:32px;
+display:flex;
+justify-content: center;
+align-items: center;
+right:-10px;
+top:-10px;
+cursor: $p;
+display:none;
+animation: 1.2s ease-in-out 0s normal none infinite running animation_opacity;
+img{
+width: 50%;
+height:50%;
+}
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+.text_warning{
+  margin-top:1.5%;
+  font-size:8px;
+  color:#FF8484;
+  position: absolute;
+}
+.filter_block{
+  background-color:$backcolor;
+
+  position:$rel;
+  height:36px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  width:10%;
+  cursor: $p;
+  transition:0.6s all;
+  &:hover img {
+    transform: rotate(180deg); 
+    transition:0.6s all
+  }
+  img{
+    width:9%;
+    position: $rel;
+    left:2px;
+    top:2px;
+  }
+  span{
+    color:#B4B4B4;
+    font-size:15px;
+  }
+}
+.choose_filter_block{
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  background-color:$backcolor;
+  box-shadow: $input-shadow;
+  z-index:100;
+  top:100%;
+  overflow: auto;
+  width:100%;
+  span{
+    cursor: $p;
+  }
+   span:hover{
+     background-color:#FF8484;
+     color:white;
+   }
+}
+@keyframes trambling-animation{
+
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-10deg);
+  }
+  20%, 40% {
+    transform: rotate(10deg);
+  }
+ 
+}
+@keyframes deleteAnimation{
+  from{
+    opacity:1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+@keyframes product_animation{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@media (max-width:1100px){
+  .product_wrapper{
+    position:$rel;
+    display:flex;
+    flex-direction:column;
+    width:35.2%;
+    background-color:$backcolor;
+    margin-left:1.2%;
+    margin-bottom: 1.2%;
+    border-radius:$radius;
+    height:100%;
+    max-height:423px;
+    &:hover .delete_product{
+    display:flex;
+    animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+    }
+  }
+}
+@media (max-width:800px) {
+  .main_wrapper{
+    display:flex;
+    flex-direction:column;
+   
+  }
+  .addproduct_wrapper{
+
+    width:70%;
+    box-shadow: $product-shadow;
+    border-radius:$radius;
+    background-color:$backcolor;
+    max-height:500px;
+    margin:$centered;
+  }
+  .product_container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+   width:90%;
+   margin: 2% auto 0 auto;
+   
+  }
+  .product_wrapper{
+    position:$rel;
+    display:flex;
+    flex-direction:column;
+    width:48%;
+    background-color:$backcolor;
+    margin-left:1.2%;
+    margin-bottom: 1.2%;
+    border-radius:$radius;
+    height:100%;
+    max-height:423px;
+    &:hover .delete_product{
+    display:flex;
+    animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+    }
+    .information_container{
+      display:flex;
+      flex-direction:column;
+      justify-content: normal;
+      height:150px;
+      .name_product{
+        font-size:12px;
+      }
+      .delete_product{
+        font-size:12px;
+      }
+      .price_product{
+        font-size:18px;
+      }
+    }
+    .image_product img{
+      height:130px;
+    }
+  }
+  
+  .filter_block{
+    width:40%;
+  }
+
+}
+
+@media (max-width:1300px) {
+  .filter_block{
+   
+    span{
+      font-size:12px;
+    }
+  }
+}
