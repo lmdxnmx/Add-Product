@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Add-Product/static/css/main.2e1089a1.css",
+    "main.js": "/Add-Product/static/js/main.3b92417c.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Add-Product/static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo.svg": "/Add-Product/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/delete.svg": "/Add-Product/static/media/delete.4a5bd7db7b28fb6998f175d0107f9913.svg",
+    "index.html": "/Add-Product/index.html",
+    "static/media/arrow.svg": "/Add-Product/static/media/arrow.2736396f8e66c5905c571356a1bb601e.svg",
+    "static/media/dot.svg": "/Add-Product/static/media/dot.98c46d9421433aff76431a0d30a57cac.svg",
+    "main.2e1089a1.css.map": "/Add-Product/static/css/main.2e1089a1.css.map",
+    "main.3b92417c.js.map": "/Add-Product/static/js/main.3b92417c.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Add-Product/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e1089a1.css",
+    "static/js/main.3b92417c.js"
+  ]
+}
